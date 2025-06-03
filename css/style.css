@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topbar {
+    height: 4vh;
+    background-color: #CF988A;
+}
+
+nav {
+    height: 8vh;
+    background-color: #703526;
+}
+
+.hero {
+    background: url(../img/hero.png) no-repeat center center;
+    background-size: cover;
+    height: 88vh;
+}
+
