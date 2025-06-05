@@ -16,17 +16,22 @@ ul a, ul i {
     color: #fff;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 section {
     padding: 6.25rem;
 }
 
 .topbar {
-    height: 4vh;
+    height: auto;
     background-color: #CF988A;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 6.25rem;
+    padding: 0.5rem 6.25rem;
 }
 
 .bar-control {
@@ -34,12 +39,12 @@ section {
     border: none;
     color: #4D1F0B;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
 }
 
 .bar-content {
     color: #4D1F0B;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 500;
     text-align: center;
 }
@@ -48,8 +53,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 6.25rem;
-    height: 8vh;
+    padding: 1.35rem 6.25rem;
+    height: auto;
     background-color: #703526;
 }
 
@@ -115,4 +120,84 @@ nav {
     background-size: cover;
     height: 88vh;
 }
+
+.hero-countdown {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    width: fit-content;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.hero-countdown span {
+    color: #FFD779;
+}
+
+.hero-countdown i {
+    font-size: 1rem;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 540px;
+    margin-bottom: 2.2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.hero-cta-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #FFD779;
+    color: #1A1A1A;
+    padding: 0.875rem 2.25rem;
+    border: 1px solid #ffd063;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 
