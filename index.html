@@ -5,6 +5,9 @@
     <title>Basic & More</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="assets/hugeicons/hugeicons-font.css">
+    <link rel="stylesheet" href="https://sets.hugeicons.com/mbx6bg77clp.css" crossorigin="anonymous">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
     <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
@@ -35,6 +38,50 @@
                 <button class="nav-icon"><i class="hgi hgi-stroke hgi-search-01"></i></button>
                 <button class="nav-icon"><i class="hgi hgi-stroke hgi-user"></i></button>
                 <button class="nav-icon"><i class="hgi hgi-stroke hgi-shopping-basket-01"></i></button>
+            </div>
+            
+            <button class="hamburger-menu" aria-label="Toggle menu">
+                <i class="hgi hgi-stroke hgi-menu-09"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="mobile-menu">
+                <div class="mobile-menu-header">
+                    <img src="img/logo/logo-1.svg" alt="Basic & More" class="mobile-menu-logo">
+                    <button class="mobile-menu-close" aria-label="Close menu">
+                        <i class="hgi hgi-stroke hgi-cancel-01"></i>
+                    </button>
+                </div>
+                
+                <div class="mobile-menu-content">
+                    <ul class="mobile-menu-links">
+                        <li><a href="#">Butikken</a></li>
+                        <li><a href="#">Ugens fund</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                        <li><a href="#">Nyheder</a></li>
+                        <li><a href="#">Find butik</a></li>
+                    </ul>
+                    
+                    <div class="mobile-menu-search">
+                        <div class="search-field">
+                            <input type="text" placeholder="Søg efter produkter...">
+                            <button type="submit"><i class="hgi hgi-stroke hgi-search-01"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile-menu-actions">
+                        <button class="mobile-action-btn">
+                            <i class="hgi hgi-stroke hgi-user"></i>
+                            <span>Min konto</span>
+                        </button>
+                        <button class="mobile-action-btn">
+                            <i class="hgi hgi-stroke hgi-shopping-basket-01"></i>
+                            <span>Kurv</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -224,8 +271,242 @@
             </div>
         </div>
     </section>
+
+    <section class="social-feed">
+        <div class="container">
+            <div class="social-feed-content">
+                <div class="social-feed-text">
+                    <div class="badge social-feed-badge">
+                        <i class="hgi hgi-stroke hgi-playlist-02"></i>
+                        Fra Instagram & TikTok
+                    </div>
+                    <h2>Små videoer. Store idéer.</h2>
+                    <p>Vi deler DIYs, tips, inspiration og behind-the-scenes på vores sociale medier</p>
+                </div>
+                
+                <div class="social-feed-buttons">
+                    <img src="img/handwritten/follow.svg" alt="følg os" class="follow-arrow">
+                    <div class="social-buttons">
+                        <a href="https://www.tiktok.com/@basicandmore" class="social-btn tiktok-btn" target="_blank" rel="noopener">
+                            <i class="hgi hgi-solid hgi-tiktok"></i>
+                            TikTok
+                        </a>
+                        <a href="https://www.instagram.com/basic_andmore/" class="social-btn instagram-btn" target="_blank" rel="noopener">
+                            <i class="hgi hgi-solid hgi-instagram"></i>
+                            Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-feed-videos">
+                <div class="video-scroll">
+                    <div class="video-item">
+                        <img src="img/social/video-thumbnail-1.jpg" alt="Social media content" loading="lazy">
+                        <div class="video-overlay">
+                            <a href="https://www.instagram.com/basic_andmore/reels/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="img/social/video-thumbnail-2.jpg" alt="Social media content" loading="lazy">
+                        <div class="video-overlay">
+                            <a href="https://www.instagram.com/basic_andmore/reels/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="img/social/video-thumbnail-3.jpg" alt="Social media content" loading="lazy">
+                        <div class="video-overlay">
+                            <a href="https://www.instagram.com/basic_andmore/reels/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="img/social/video-thumbnail-4.jpg" alt="Social media content" loading="lazy">
+                        <div class="video-overlay">
+                            <a href="https://www.instagram.com/basic_andmore/reels/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="img/social/video-thumbnail-5.jpg" alt="Social media content" loading="lazy">
+                        <div class="video-overlay">
+                            <a href="https://www.instagram.com/basic_andmore/reels/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="img/social/video-thumbnail-6.jpg" alt="Social media content" loading="lazy">
+                        <div class="video-overlay">
+                            <a href="https://www.instagram.com/basic_andmore/reels/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Seamless loop -->
+                    <div class="video-item"> 
+                        <img src="img/social/video-thumbnail-1.jpg" alt="Social media content" loading="lazy">
+                        <div class="video-overlay">
+                            <a href="https://www.instagram.com/basic_andmore/reels/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="img/social/video-thumbnail-2.jpg" alt="Social media content" loading="lazy">
+                        <div class="video-overlay">
+                            <a href="https://www.instagram.com/basic_andmore/reels/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="img/social/video-thumbnail-3.jpg" alt="Social media content" loading="lazy">
+                        <div class="video-overlay">
+                            <a href="https://www.instagram.com/basic_andmore/reels/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-play"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="store-locations">
+        <div class="container">
+            <div class="store-locations-header">
+                <div class="badge store-locations-tag">
+                    <i class="hgi hgi-stroke hgi-location-01"></i>
+                    Lokationer
+                </div>
+                <h2>Find din nærmeste Basic & More</h2>
+                <p>Vores butikker har endnu flere nye varer hver uge og små overraskelser overalt. Find din nærmeste butik og gå på opdagelse i virkeligheden.</p>
+            </div>
+            
+            <div class="map-container">
+                <div id="store-map"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="newsletter-cta">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Tilmeld dig vores nyhedsbrev og få inspiration og eksklusive tilbud direkte i din indbakke</h2>
+                
+                <form class="newsletter-form">
+                    <div class="newsletter-input-group">
+                        <div class="newsletter-input-wrapper">
+                            <i class="hgi hgi-stroke hgi-mail-01"></i>
+                            <input type="email" placeholder="Indtast email" required>
+                        </div>
+                        <button type="submit" class="newsletter-btn">
+                            <span class="newsletter-btn-text">Tilmeld</span>
+                            <i class="hgi hgi-stroke hgi-arrow-right-02 newsletter-btn-icon"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-brand">
+                        <img src="img/logo/logo-1.svg" alt="Basic & More" class="footer-logo">
+                        <p>Shop kendte brands til skarpe priser hos Basic & More. Vi får nye varer hver uge. Shop restparti og overskudsvarer til vanvittig lave priser. Billigere end markedet.</p>
+                        
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/basicandmoredk" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-facebook-01"></i>
+                            </a>
+                            <a href="https://dk.pinterest.com/basic_andmore/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-pinterest"></i>
+                            </a>
+                            <a href="https://www.instagram.com/basic_andmore/" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@basicandmore" target="_blank" rel="noopener">
+                                <i class="hgi hgi-solid hgi-tiktok"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="footer-apps">
+                            <div class="app-buttons">
+                                <a href="https://www.apple.com/dk/app-store/" target="_blank" rel="noopener" class="app-btn">
+                                    <img src="img/app/apple.svg" alt="Download på App Store">
+                                </a>
+                                <a href="https://play.google.com/store/apps" target="_blank" rel="noopener" class="app-btn">
+                                    <img src="img/app/google.svg" alt="Få det på Google Play">
+                                </a>
+                            </div>
+                            <img src="img/handwritten/app.svg" alt="hent appen" class="app-arrow">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-right">
+                    <div class="footer-column">
+                        <h4>INFORMATION</h4>
+                        <ul>
+                            <li><a href="#">Om os</a></li>
+                            <li><a href="#">Kontakt os</a></li>
+                            <li><a href="#">Find butik</a></li>
+                            <li><a href="#">Karriere</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>BETINGELSER</h4>
+                        <ul>
+                            <li><a href="#">Levering</a></li>
+                            <li><a href="#">Handelsbetingelser</a></li>
+                            <li><a href="#">Returnering</a></li>
+                            <li><a href="#">Persondatapolitik</a></li>
+                            <li><a href="#">Smiley-ordning</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>KONTAKT</h4>
+                        <div class="contact-info">
+                            <a href="tel:70602570" class="contact-link">
+                                <i class="hgi hgi-stroke hgi-call"></i>
+                                70 60 25 70
+                            </a>
+                            <a href="mailto:info@basicandmore.dk" class="contact-link">
+                                <i class="hgi hgi-stroke hgi-mail-01"></i>
+                                Send en mail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Cookies</a>
+                    <a href="#">Sitemap</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2025 Basic & More
+                </div>
+            </div>
+        </div>
+    </footer>
     
     <script src="js/products.js"></script>
+    <script src="js/mapbox.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

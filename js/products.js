@@ -1,4 +1,4 @@
-// Product data for different sections
+// Produktdata for forskellige sektioner
 const productData = {
     recommendations: {
         header: {
@@ -48,6 +48,45 @@ const productData = {
                 price: 998,
                 currency: "DKK",
                 discount: "-71%"
+            },
+            {
+                id: "plaid",
+                image: "img/products/plaid.webp",
+                alt: "Plaid m. vaffelm.",
+                tag: {
+                    icon: "hgi-package-open",
+                    text: "Restparti"
+                },
+                title: "Plaid m. vaffelmønster",
+                description: "Speedtsbergs i mørkeblå",
+                price: 227,
+                currency: "DKK"
+            },
+            {
+                id: "plaid",
+                image: "img/products/plaid.webp",
+                alt: "Plaid m. vaffelm.",
+                tag: {
+                    icon: "hgi-package-open",
+                    text: "Restparti"
+                },
+                title: "Plaid m. vaffelmønster",
+                description: "Speedtsbergs i mørkeblå",
+                price: 227,
+                currency: "DKK"
+            },
+            {
+                id: "plaid",
+                image: "img/products/plaid.webp",
+                alt: "Plaid m. vaffelm.",
+                tag: {
+                    icon: "hgi-package-open",
+                    text: "Restparti"
+                },
+                title: "Plaid m. vaffelmønster",
+                description: "Speedtsbergs i mørkeblå",
+                price: 227,
+                currency: "DKK"
             },
             {
                 id: "plaid",
@@ -156,7 +195,7 @@ const productData = {
     }
 };
 
-// Create product card HTML
+// Opret produktkort HTML
 function createProductCard(product) {
     const discountHtml = product.discount ? `<span class="discount">${product.discount}</span>` : '';
     
@@ -195,7 +234,7 @@ function createProductCard(product) {
     `;
 }
 
-// Create section header HTML
+// Opret sektion header HTML
 function createSectionHeader(headerData) {
     return `
         <div class="badge product-header-tag">
@@ -207,29 +246,29 @@ function createSectionHeader(headerData) {
     `;
 }
 
-// Populate a product section
+// Udfyld en produktsektion
 function populateProductSection(sectionId, sectionData) {
     const section = document.querySelector(`[data-section="${sectionId}"]`);
     if (!section) return;
 
-    // Update header
+    // Opdater header
     const headerContainer = section.querySelector('.product-header');
     if (headerContainer) {
         headerContainer.innerHTML = createSectionHeader(sectionData.header);
     }
 
-    // Update products
+    // Opdater produkter
     const productsContainer = section.querySelector('.product-scroll');
     if (productsContainer) {
         productsContainer.innerHTML = sectionData.products.map(createProductCard).join('');
     }
 }
 
-// Initialize all product sections
+// Initialiser alle produktsektioner
 function initializeProductSections() {
     populateProductSection('recommendations', productData.recommendations);
     populateProductSection('summer-theme', productData.summerTheme);
 }
 
-// Initialize when DOM is loaded
+// Initialiser når DOM er indlæst
 document.addEventListener('DOMContentLoaded', initializeProductSections); 

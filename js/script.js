@@ -128,8 +128,54 @@ function initTopbarMessages() {
     }
 }
 
+// Mobile Menu
+function initMobileMenu() {
+    const hamburgerBtn = document.querySelector('.hamburger-menu');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    
+    if (!hamburgerBtn || !mobileMenuOverlay || !mobileMenuClose) return;
+    
+    function openMenu() {
+        hamburgerBtn.classList.add('active');
+        mobileMenuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    
+    function closeMenu() {
+        hamburgerBtn.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+    
+    // Event listeners
+    hamburgerBtn.addEventListener('click', openMenu);
+    mobileMenuClose.addEventListener('click', closeMenu);
+    
+    // Close menu when clicking on overlay (outside menu)
+    mobileMenuOverlay.addEventListener('click', (e) => {
+        if (e.target === mobileMenuOverlay) {
+            closeMenu();
+        }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+    
+    // Close menu when clicking on menu links
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+}
+
 // Initialiser når DOM er indlæst
 document.addEventListener('DOMContentLoaded', () => {
     initCountdown();
     initTopbarMessages();
+    initMobileMenu();
 });
