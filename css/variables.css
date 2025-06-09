@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Colors */
+    --color-primary: #703526;
+    --color-primary-dark: #4D1F0B;
+    --color-secondary: #CF988A;
+    --color-accent: #FFD779;
+    --color-accent-dark: #ffd063;
+    --color-white: #fff;
+    --color-dark: #1A1A1A;
+    --color-bg-dark: #F5EEE9;
+    --color-bg-light: #FAF6F3;
+    --color-text-muted: #605551;
+    --color-white-10: rgba(255, 255, 255, 0.1);
+    --color-white-50: rgba(255, 255, 255, 0.5);
+    --color-white-80: rgba(255, 255, 255, 0.8);
+    --color-black-20: rgba(0, 0, 0, 0.2);
+    --color-black-10: rgba(0, 0, 0, 0.1);
+    --color-primary-15: rgba(112, 53, 38, 0.15);
+    --color-primary-70: rgba(112, 53, 38, 0.70);
+    --color-countdown-bg: #622C1F;
+    --color-countdown-label: #D09F90;
+    --color-border-accent: #894535;
+    --color-gradient-top: #DBAA9B;
+    --color-gradient-bottom: #CF988A;
+    
+    /* Typography */
+    --font-family: 'Geist', sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.35rem;
+    --font-size-xl: 1.75rem;
+    --font-size-2xl: 2rem;
+    --font-size-2xl-lg: 2.25rem;
+    --font-size-3xl: 2.5rem;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --line-height-tight: 1.2;
+
+    /* Icons */
+    --icon-size-sm: 16px;
+    --icon-size-md: 20px;
+    --icon-size-lg: 24px;
+    
+    /* Spacing */
+    --spacing-0: 0;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-9: 2.25rem;
+    --spacing-10: 2.5rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+    --spacing-20: 5rem;
+    --spacing-24: 6rem;
+    
+    /* Product card specific spacing */
+    --spacing-0-25: 0.25rem;
+    --spacing-0-75: 0.75rem;
+    --spacing-0-875: 0.875rem;
+    --spacing-1-125: 1.125rem;
+    
+    /* Layout */
+    --container-max-width: 1200px;
+    --border-radius: 0.5rem;
+    --hero-height: 88vh;
+    
+    /* Transitions */
+    --transition-base: 0.3s ease;
+} 

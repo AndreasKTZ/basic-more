@@ -251,10 +251,10 @@ function populateProductSection(sectionId, sectionData) {
     const section = document.querySelector(`[data-section="${sectionId}"]`);
     if (!section) return;
 
-    // Opdater header
-    const headerContainer = section.querySelector('.product-header');
-    if (headerContainer) {
-        headerContainer.innerHTML = createSectionHeader(sectionData.header);
+    // Opdater header content
+    const headerContentContainer = section.querySelector('.product-header-content');
+    if (headerContentContainer) {
+        headerContentContainer.innerHTML = createSectionHeader(sectionData.header);
     }
 
     // Opdater produkter
@@ -264,10 +264,74 @@ function populateProductSection(sectionId, sectionData) {
     }
 }
 
+// Produktnavigation funktionalitet
+function setupProductNavigation(sectionId) {
+    const section = document.querySelector(`[data-section="${sectionId}"]`);
+    if (!section) return;
+
+    const scrollContainer = section.querySelector('.product-scroll');
+    const prevBtn = section.querySelector('.product-nav-prev');
+    const nextBtn = section.querySelector('.product-nav-next');
+    
+    if (!scrollContainer || !prevBtn || !nextBtn) return;
+
+    // Beregn scroll afstand baseret på faktisk kortbredde
+    function getScrollDistance() {
+        const firstCard = scrollContainer.querySelector('.product-card');
+        if (firstCard) {
+            const cardWidth = firstCard.offsetWidth;
+            const gap = 20; // Mellemrum mellem kort
+            return cardWidth + gap;
+        }
+        return 300; // Fallback værdi
+    }
+
+    // Opdater knaptilstande
+    function updateButtonStates() {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        
+        prevBtn.disabled = scrollLeft <= 0;
+        nextBtn.disabled = scrollLeft >= maxScrollLeft - 1; // -1 for afrundingsfejl
+    }
+
+    // Scroll funktioner
+    function scrollPrev() {
+        scrollContainer.scrollBy({
+            left: -getScrollDistance(),
+            behavior: 'smooth'
+        });
+    }
+
+    function scrollNext() {
+        scrollContainer.scrollBy({
+            left: getScrollDistance(),
+            behavior: 'smooth'
+        });
+    }
+
+    // Event listeners
+    prevBtn.addEventListener('click', scrollPrev);
+    nextBtn.addEventListener('click', scrollNext);
+    scrollContainer.addEventListener('scroll', updateButtonStates);
+
+    // Indledende knaptilstand
+    updateButtonStates();
+
+    // Opdater knaptilstande ved vinduesændring
+    window.addEventListener('resize', updateButtonStates);
+}
+
 // Initialiser alle produktsektioner
 function initializeProductSections() {
     populateProductSection('recommendations', productData.recommendations);
     populateProductSection('summer-theme', productData.summerTheme);
+    
+    // Opsæt navigation for hver sektion efter en lille forsinkelse for at sikre DOM er opdateret
+    setTimeout(() => {
+        setupProductNavigation('recommendations');
+        setupProductNavigation('summer-theme');
+    }, 100);
 }
 
 // Initialiser når DOM er indlæst
