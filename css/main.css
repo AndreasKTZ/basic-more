@@ -152,7 +152,7 @@ nav .container {
     opacity: 0.8;
 }
 
-/* Hamburger Menu */
+/* Hamburger menu */
 .hamburger-menu {
     display: none;
     justify-content: center;
@@ -175,7 +175,7 @@ nav .container {
     opacity: 0.8;
 }
 
-/* Mobile Menu Overlay */
+/* Mobil menu overlay */
 .mobile-menu-overlay {
     position: fixed;
     top: 0;
@@ -362,24 +362,48 @@ nav .container {
     font-size: 20px;
 }
 
-/* Responsive Navigation */
+/* Responsiv navigation */
 @media (max-width: 768px) {
     .nav-menu,
     .nav-icons {
         display: none;
     }
-    
+
     .hamburger-menu {
         display: flex;
+    }
+    
+    /* Hero mobile styles */
+    .hero-navigation {
+        display: none; /* Skjul navigation pile på mobil */
+    }
+    
+    .hero-indicators {
+        bottom: 0;
+        gap: var(--spacing-1);
+        padding: var(--spacing-1) var(--spacing-3);
+    }
+    
+    .hero-indicator {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .hero-indicator-nav {
+        display: none; /* Skjul navigation pile på mobil */
     }
 }
 
 .hero {
-    background: url(../img/hero.png) no-repeat center center;
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     height: var(--hero-height);
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-primary);
 }
 
 .hero .container {
@@ -387,6 +411,193 @@ nav .container {
     flex-direction: column;
     justify-content: center;
     padding: var(--spacing-0) var(--spacing-5);
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero overlay til slides med overlay aktiveret */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    transition: background 0.8s ease;
+    z-index: 1;
+}
+
+/* Hero slide indhold animation */
+.hero-slide-content {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Hero alignment klasser */
+.hero-left .hero-slide-content {
+    align-items: flex-start;
+}
+
+.hero-center .hero-slide-content {
+    align-items: center;
+}
+
+.hero-right .hero-slide-content {
+    align-items: flex-end;
+}
+
+.hero-left .hero-countdown,
+.hero-left .hero-content,
+.hero-left .hero-cta {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.hero-center .hero-countdown,
+.hero-center .hero-content,
+.hero-center .hero-cta {
+    align-self: center;
+    text-align: center;
+}
+
+.hero-right .hero-countdown,
+.hero-right .hero-content,
+.hero-right .hero-cta {
+    align-self: flex-end;
+    text-align: right;
+}
+
+/* CTA section alignment */
+.hero-left .hero-cta {
+    align-items: flex-start;
+}
+
+.hero-center .hero-cta {
+    align-items: center;
+}
+
+.hero-right .hero-cta {
+    align-items: flex-end;
+}
+
+/* Badge styling til overlay slides */
+.hero-overlay + .container .hero-countdown {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--color-white);
+}
+
+/* Hero navigation knapper - skjult til fordel for indikator pile */
+.hero-navigation {
+    display: none;
+}
+
+.hero-nav-btn {
+    pointer-events: auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    backdrop-filter: blur(10px);
+    opacity: 0.7;
+}
+
+.hero-nav-btn:hover {
+    background-color: white;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.hero-nav-btn i {
+    font-size: var(--icon-size-md);
+}
+
+/* Hero indicators */
+.hero-indicators {
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: var(--spacing-2);
+    z-index: 3;
+    padding: var(--spacing-2) var(--spacing-4);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Hero indikator navigation pile */
+.hero-indicator-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    z-index: 4;
+}
+
+.hero-indicator-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.hero-indicator-nav.prev {
+    left: -33px;
+}
+
+.hero-indicator-nav.next {
+    right: -33px;
+}
+
+.hero-indicator-nav i {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-indicator-nav:hover i {
+    color: white;
+}
+
+.hero-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.hero-indicator:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.25);
+}
+
+.hero-indicator.active {
+    background-color: var(--color-white);
+    transform: scale(1.4);
 }
 
 .hero-countdown {
@@ -447,7 +658,6 @@ h1 {
 .hero-cta {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: var(--spacing-3);
 }
 
@@ -489,7 +699,7 @@ h1 {
     border: 1px solid var(--color-black-20);
 }
 
-/* Categories Section */
+/* Kategorier sektion */
 .categories {
     padding: var(--spacing-24) var(--spacing-0);
     background-color: var(--color-bg-light);
@@ -520,7 +730,7 @@ h1 {
     margin: 0 auto;
 }
 
-/* Badge Component */
+/* Badge komponent */
 .badge {
     display: inline-flex;
     align-items: center;
@@ -820,7 +1030,7 @@ h1 {
     }
 }
 
-/* Product Section */
+/* Produkt sektion */
 .product {
     background-color: var(--color-bg-light);
     padding: var(--spacing-24) var(--spacing-0);
@@ -1168,7 +1378,7 @@ h1 {
     }
 }
 
-/* Info Section */
+/* Info sektion */
 .info-section {
     background-color: var(--color-bg-light);
     padding: var(--spacing-24) var(--spacing-0);
@@ -1262,7 +1472,7 @@ h1 {
     }
 }
 
-/* Social Feed Section */
+/* Social feed sektion */
 .social-feed {
     background-color: var(--color-primary);
     padding: var(--spacing-20) var(--spacing-0);
@@ -1519,7 +1729,7 @@ h1 {
     }
 }
 
-/* Store Locations Section */
+/* Butikslokationer sektion */
 .store-locations {
     background-color: var(--color-bg-light);
     padding: var(--spacing-20) var(--spacing-0);
@@ -1604,7 +1814,7 @@ h1 {
     font-weight: bold;
 }
 
-/* Custom marker styling */
+/* Brugerdefineret marker styling */
 .custom-marker {
     width: 30px;
     height: 30px;
@@ -1640,7 +1850,7 @@ h1 {
     }
 }
 
-/* Newsletter CTA Section */
+/* Newsletter CTA sektion */
 .newsletter-cta {
     background-color: var(--color-primary);
     padding: var(--spacing-20) var(--spacing-0);
@@ -1802,7 +2012,7 @@ h1 {
     }
 }
 
-/* Newsletter Animations */
+/* Newsletter animationer */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1825,7 +2035,7 @@ h1 {
     }
 }
 
-/* Footer Section */
+/* Footer sektion */
 .footer {
     background-color: var(--color-primary-dark);
     color: var(--color-white);

@@ -316,17 +316,27 @@ class ProductShowcase {
         const currentProduct = hotspots[this.currentIndex];
         const discountHtml = currentProduct.discount ? `<span class="discount">${currentProduct.discount}</span>` : '';
         
+        const stockCount = getTotalStock(currentProduct.stock);
+        const stockClass = stockCount <= 3 ? 'low-stock' : '';
+        
         productInfo.innerHTML = `
             <div class="product-info-content">
-                <h3>${currentProduct.title}</h3>
-                <p>${currentProduct.shortDescription}</p>
-                <div class="product-price-mobile">
-                    <span class="price">${currentProduct.price}</span>
-                    <span class="currency">${currentProduct.currency}</span>
-                    ${discountHtml}
+                <div class="product-info-header">
+                    <div class="product-info-text">
+                        <h3>${currentProduct.title}</h3>
+                        <div class="product-price-mobile">
+                            <span class="price">${currentProduct.price}</span>
+                            <span class="currency">${currentProduct.currency}</span>
+                            ${discountHtml}
+                        </div>
+                        <div class="product-stock-mobile ${stockClass}">
+                            ${stockCount} ${currentProduct.stockUnit} på lager
+                        </div>
+                    </div>
+                    <button class="mobile-view-product-btn" onclick="productShowcase.openProductOverlay(hotspots[${this.currentIndex}])">
+                        Se produkt
+                    </button>
                 </div>
-                <div class="product-stock-mobile">${getTotalStock(currentProduct.stock)} ${currentProduct.stockUnit} på lager</div>
-                <div class="product-counter">${this.currentIndex + 1} / ${hotspots.length}</div>
             </div>
         `;
     }
