@@ -257,7 +257,7 @@ class StoreLocator {
         // Initialiser kortet med standard centrum
         this.map = new mapboxgl.Map({
             container: 'store-map',
-            style: 'mapbox://styles/mapbox/light-v11', // Lyst tema for at matche designet
+            style: 'mapbox://styles/katzmann/cmbssskro000l01s9gemvemhl', // Lyst tema for at matche designet
             center: defaultCenter,
             zoom: defaultZoom,
             attributionControl: false
@@ -294,24 +294,49 @@ class StoreLocator {
 
     async getIPBasedLocation() {
         try {
-            // Brug ipapi.co service (gratis, ingen API nøgle nødvendig)
-            const response = await fetch('https://ipapi.co/json/');
-            if (!response.ok) throw new Error('IP location service unavailable');
+            // Prøv først ipify.org + ip-api.com kombination (CORS-venlig)
+            const ipResponse = await fetch('https://api.ipify.org?format=json');
+            if (!ipResponse.ok) throw new Error('Could not get IP address');
             
-            const data = await response.json();
+            const ipData = await ipResponse.json();
+            const locationResponse = await fetch(`http://ip-api.com/json/${ipData.ip}?fields=status,country,countryCode,region,regionName,city,lat,lon`);
             
-            // Tjek om vi har gyldige koordinater
-            if (data.latitude && data.longitude) {
+            if (!locationResponse.ok) throw new Error('IP location service unavailable');
+            
+            const data = await locationResponse.json();
+            
+            // Tjek om vi har gyldige koordinater og status er success
+            if (data.status === 'success' && data.lat && data.lon) {
                 return {
-                    latitude: data.latitude,
-                    longitude: data.longitude,
+                    latitude: data.lat,
+                    longitude: data.lon,
                     city: data.city,
-                    country: data.country_name,
+                    country: data.country,
                     accuracy: 'city' // IP-baseret er kun præcis til by-niveau
                 };
             }
             throw new Error('Invalid coordinates from IP service');
         } catch (error) {
+            // Fallback: Prøv en alternativ CORS-venlig service
+            try {
+                const response = await fetch('https://freeipapi.com/api/json');
+                if (!response.ok) throw new Error('Fallback IP service unavailable');
+                
+                const data = await response.json();
+                
+                if (data.latitude && data.longitude) {
+                    return {
+                        latitude: data.latitude,
+                        longitude: data.longitude,
+                        city: data.cityName,
+                        country: data.countryName,
+                        accuracy: 'city'
+                    };
+                }
+            } catch (fallbackError) {
+                console.log('Fallback IP-placering fejlede også:', fallbackError.message);
+            }
+            
             console.log('Kunne ikke hente IP-baseret placering:', error.message);
             return null;
         }

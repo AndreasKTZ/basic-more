@@ -7,10 +7,10 @@
     --color-secondary: #CF988A;
     --color-accent: #FFD779;
     --color-accent-dark: #ffd063;
-    --color-white: #fff;
+    --color-white: #FFF9F4;
     --color-dark: #1A1A1A;
-    --color-bg-dark: #F5EEE9;
-    --color-bg-light: #FAF6F3;
+    --color-bg-dark: #F3E0D2;
+    --color-bg-light: #F4E8DF;
     --color-text-muted: #605551;
     --color-white-10: rgba(255, 255, 255, 0.1);
     --color-white-50: rgba(255, 255, 255, 0.5);
@@ -71,7 +71,7 @@
     /* Layout */
     --container-max-width: 1200px;
     --border-radius: 0.5rem;
-    --hero-height: 87vh;
+    --hero-height: 88vh;
     
     /* Transitions */
     --transition-base: 0.3s ease;

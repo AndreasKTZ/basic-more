@@ -17,12 +17,12 @@ ul {
 
 ul a, ul i {
     text-decoration: none;
-    color: var(--color-white);
+    color: white;
 }
 
 a {
     text-decoration: none;
-    color: var(--color-white);
+    color: white;
 }
 
 .container {
@@ -1817,13 +1817,25 @@ h1 {
 /* Brugerdefineret marker styling */
 .custom-marker {
     width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: var(--color-primary);
-    border: 3px solid var(--color-white);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    height: 40px;
+    position: relative;
     cursor: pointer;
     transition: transform var(--transition-base);
+}
+
+.custom-marker::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-primary);
+    border: 3px solid var(--color-white);
+    border-radius: 50% 50% 50% 0;
+    transform: translateX(-50%) rotate(-45deg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .custom-marker:hover {

@@ -2,7 +2,7 @@
 function initCountdown() {
     // Indstil måldato her (ÅÅÅÅ, MM-1, DD, TT, MM, SS)
     // Bemærk: Måned er 0-indekseret (0 = januar, 11 = december)
-    const targetDate = new Date(2025, 5, 10, 23, 59, 59); // 10. juni 2025 kl. 23:59:59
+    const targetDate = new Date(2025, 5, 15, 23, 59, 59); // 15. juni 2025 kl. 23:59:59
     
     const timerElement = document.querySelector('.timer');
     
