@@ -60,45 +60,46 @@ const productData = {
                 title: "Plaid m. vaffelmønster",
                 description: "Speedtsbergs i mørkeblå",
                 price: 227,
-                currency: "DKK"
+                currency: "DKK",
+                discount: "-18%"
             },
             {
-                id: "plaid",
-                image: "img/products/plaid.webp",
-                alt: "Plaid m. vaffelm.",
+                id: "bidda",
+                image: "img/products/bidda.webp",
+                alt: "Keramik Bakke BIDDA",
                 tag: {
                     icon: "hgi-package-open",
                     text: "Restparti"
                 },
-                title: "Plaid m. vaffelmønster",
-                description: "Speedtsbergs i mørkeblå",
-                price: 227,
+                title: "Keramik Bakke BIDDA",
+                description: "Grøn (12,2x20x3cm)",
+                price: 64,
                 currency: "DKK"
             },
             {
-                id: "plaid",
-                image: "img/products/plaid.webp",
-                alt: "Plaid m. vaffelm.",
+                id: "susan-lampe",
+                image: "img/products/susan-lampe.webp",
+                alt: "Arkitektlampe SUSAN",
                 tag: {
                     icon: "hgi-package-open",
                     text: "Restparti"
                 },
-                title: "Plaid m. vaffelmønster",
-                description: "Speedtsbergs i mørkeblå",
-                price: 227,
+                title: "Arkitektlampe SUSAN",
+                description: "Sort (45,5x43,5x37,5cm)",
+                price: 137,
                 currency: "DKK"
             },
             {
-                id: "plaid",
-                image: "img/products/plaid.webp",
-                alt: "Plaid m. vaffelm.",
+                id: "day-kasse",
+                image: "img/products/opbevaringskasse.webp",
+                alt: "DAY Opbevaringskasse",
                 tag: {
                     icon: "hgi-package-open",
                     text: "Restparti"
                 },
-                title: "Plaid m. vaffelmønster",
-                description: "Speedtsbergs i mørkeblå",
-                price: 227,
+                title: "DAY Opbevaringskasse",
+                description: "Foldbar Dark Grey",
+                price: 34,
                 currency: "DKK"
             },
             {
@@ -189,6 +190,19 @@ const productData = {
                 title: "Quilt m. blomster",
                 description: "i Rosa/Hvid (130x170cm)",
                 price: 200,
+                currency: "DKK"
+            },
+            {
+                id: "bidda",
+                image: "img/products/bidda.webp",
+                alt: "Keramik Bakke BIDDA",
+                tag: {
+                    icon: "hgi-package-open",
+                    text: "Restparti"
+                },
+                title: "Keramik Bakke BIDDA",
+                description: "Grøn (12,2x20x3cm)",
+                price: 64,
                 currency: "DKK"
             }
         ]

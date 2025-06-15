@@ -6,8 +6,8 @@ const heroSlides = [
             icon: 'hgi-timer-02',
             text: 'Ugens fund'
         },
-        heading: 'Varme nuancer, taktile overflader og ro i udtrykket',
-        description: 'Vi har udvalgt det bedste fra ugens parti i ét digitalt spot – kurateret med blik for detaljer, stemning og begrænset til ganske kort tid.',
+        heading: 'Skab stemning med denne uges helt særlige fund',
+        description: 'Denne uge har vi samlet helt særlige varer til dig. Alt fra smukke vaser til elegante lysestager. Perfekt til at skabe hygge i hjemmet.',
         ctaText: 'Gå på opdagelse',
         ctaIcon: 'hgi-arrow-right-02',
         ctaLink: 'weekly.html',
