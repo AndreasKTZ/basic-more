@@ -69,61 +69,61 @@
 <body>
     <div class="topbar">
         <div class="container">
-            <button class="bar-control left"><i class="hgi hgi-stroke hgi-circle-arrow-left-02"></i></button>
+            <button class="bar-control left" aria-label="Forrige"><i class="hgi hgi-stroke hgi-circle-arrow-left-02"></i></button>
             <div class="bar-content">
                 <!-- Bar Content (JavaScript) -->
                 Placeholder
             </div>
-            <button class="bar-control right"><i class="hgi hgi-stroke hgi-circle-arrow-right-02"></i></button>
+            <button class="bar-control right" aria-label="Næste"><i class="hgi hgi-stroke hgi-circle-arrow-right-02"></i></button>
         </div>
     </div>
 
-    <nav class="nav">
+    <nav class="nav" role="navigation" aria-label="Hovednavigation">
         <div class="container">
             <img src="img/logo/logo-1.svg" alt="logo" class="nav-logo">
             
-            <ul class="nav-menu">
-                <li><a href="#">Butikken</a><i class="hgi hgi-stroke hgi-arrow-down-01"></i></li>
-                <li><a href="weekly.html">Ugens fund</a></li>
-                <li><a href="#">Inspiration</a></li>
-                <li><a href="#">Nyheder</a></li>
-                <li><a href="#">Find butik</a></li>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#" role="menuitem" aria-haspopup="true">Butikken</a><i class="hgi hgi-stroke hgi-arrow-down-01" aria-hidden="true"></i></li>
+                <li role="none"><a href="weekly.html" role="menuitem">Ugens fund</a></li>
+                <li role="none"><a href="#" role="menuitem">Inspiration</a></li>
+                <li role="none"><a href="#" role="menuitem">Nyheder</a></li>
+                <li role="none"><a href="#" role="menuitem">Find butik</a></li>
             </ul>
             
-            <div class="nav-icons">
-                <button class="nav-icon"><i class="hgi hgi-stroke hgi-search-01"></i></button>
-                <button class="nav-icon"><i class="hgi hgi-stroke hgi-user"></i></button>
-                <button class="nav-icon"><i class="hgi hgi-stroke hgi-shopping-basket-01"></i></button>
+            <div class="nav-icons" role="toolbar" aria-label="Navigationshandlinger">
+                <button class="nav-icon" aria-label="Søg"><i class="hgi hgi-stroke hgi-search-01" aria-hidden="true"></i></button>
+                <button class="nav-icon" aria-label="Min konto"><i class="hgi hgi-stroke hgi-user" aria-hidden="true"></i></button>
+                <button class="nav-icon" aria-label="Indkøbskurv"><i class="hgi hgi-stroke hgi-shopping-basket-01" aria-hidden="true"></i></button>
             </div>
             
-            <button class="hamburger-menu" aria-label="Toggle menu">
-                <i class="hgi hgi-stroke hgi-menu-09"></i>
+            <button class="hamburger-menu" aria-label="Åbn menu">
+                <i class="hgi hgi-stroke hgi-menu-09" aria-hidden="true"></i>
             </button>
         </div>
         
         <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay">
+        <div class="mobile-menu-overlay" role="dialog" aria-modal="true" aria-label="Mobil menu">
             <div class="mobile-menu">
                 <div class="mobile-menu-header">
                     <img src="img/logo/logo-1.svg" alt="Basic & More" class="mobile-menu-logo">
-                    <button class="mobile-menu-close" aria-label="Close menu">
-                        <i class="hgi hgi-stroke hgi-cancel-01"></i>
+                    <button class="mobile-menu-close" aria-label="Luk menu">
+                        <i class="hgi hgi-stroke hgi-cancel-01" aria-hidden="true"></i>
                     </button>
                 </div>
                 
                 <div class="mobile-menu-content">
-                    <ul class="mobile-menu-links">
-                        <li><a href="#">Butikken</a></li>
-                        <li><a href="weekly.html">Ugens fund</a></li>
-                        <li><a href="#">Inspiration</a></li>
-                        <li><a href="#">Nyheder</a></li>
-                        <li><a href="#">Find butik</a></li>
+                    <ul class="mobile-menu-links" role="menu">
+                        <li role="none"><a href="#" role="menuitem">Butikken</a></li>
+                        <li role="none"><a href="weekly.html" role="menuitem">Ugens fund</a></li>
+                        <li role="none"><a href="#" role="menuitem">Inspiration</a></li>
+                        <li role="none"><a href="#" role="menuitem">Nyheder</a></li>
+                        <li role="none"><a href="#" role="menuitem">Find butik</a></li>
                     </ul>
                     
-                    <div class="mobile-menu-search">
+                    <div class="mobile-menu-search" role="search">
                         <div class="search-field">
-                            <input type="text" placeholder="Søg efter produkter...">
-                            <button type="submit"><i class="hgi hgi-stroke hgi-search-01"></i></button>
+                            <input type="text" placeholder="Søg efter produkter..." aria-label="Søg efter produkter">
+                            <button type="submit" aria-label="Søg"><i class="hgi hgi-stroke hgi-search-01" aria-hidden="true"></i></button>
                         </div>
                     </div>
                     
@@ -142,14 +142,14 @@
         </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero" role="banner" aria-labelledby="hero-heading">
         <div class="container">
-            <div class="hero-countdown">
-                <i class="hgi hgi-stroke hgi-timer-02"></i>
-                Ugens fund – <span class="timer">00:00:00:00</span>
+            <div class="hero-countdown" aria-live="polite">
+                <i class="hgi hgi-stroke hgi-timer-02" aria-hidden="true"></i>
+                Ugens fund – <span class="timer" aria-label="Resterende tid">00:00:00:00</span>
             </div>
             <div class="hero-content">
-                <h1>Varme nuancer, taktile overflader og ro i udtrykket</h1>
+                <h1 id="hero-heading">Varme nuancer, taktile overflader og ro i udtrykket</h1>
                 <p>Vi har udvalgt det bedste fra ugens parti i ét digitalt spot – kurateret med blik for detaljer, stemning og begrænset til ganske kort tid.</p>
             </div>
             <div class="hero-cta">
@@ -159,14 +159,14 @@
         </div>
     </section>
 
-    <section class="categories">
+    <section class="categories" aria-labelledby="categories-heading">
         <div class="container">
             <div class="categories-header">
                 <div class="badge categories-tag">
-                    <i class="hgi hgi-stroke hgi-store-03"></i>
+                    <i class="hgi hgi-stroke hgi-store-03" aria-hidden="true"></i>
                     Kategorier
                 </div>
-                <h2>Hvad leder du efter i dag?</h2>
+                <h2 id="categories-heading">Hvad leder du efter i dag?</h2>
                 <p>Find det du leder efter – eller noget, du ikke vidste, du manglede. Vi har samlet vores univers i overskuelige kategorier, så du nemt kan gå på opdagelse.</p>
             </div>
             
@@ -257,21 +257,21 @@
                     <a href="weekly.html" class="cta-button btn-primary">Se dem før de er væk <i class="hgi hgi-stroke hgi-arrow-right-02"></i></a>
                 </div>
                 
-                <div class="weekly-deal-countdown">
+                <div class="weekly-deal-countdown" aria-live="polite">
                     <div class="countdown-item">
-                        <span class="countdown-number" id="days-large">00</span>
+                        <span class="countdown-number" id="days-large" aria-label="Resterende dage">00</span>
                         <span class="countdown-label">dage</span>
                     </div>
                     <div class="countdown-item">
-                        <span class="countdown-number" id="hours-large">00</span>
+                        <span class="countdown-number" id="hours-large" aria-label="Resterende timer">00</span>
                         <span class="countdown-label">timer</span>
                     </div>
                     <div class="countdown-item">
-                        <span class="countdown-number" id="minutes-large">00</span>
+                        <span class="countdown-number" id="minutes-large" aria-label="Resterende minutter">00</span>
                         <span class="countdown-label">min</span>
                     </div>
                     <div class="countdown-item">
-                        <span class="countdown-number" id="seconds-large">00</span>
+                        <span class="countdown-number" id="seconds-large" aria-label="Resterende sekunder">00</span>
                         <span class="countdown-label">sek</span>
                     </div>
                 </div>
@@ -285,12 +285,12 @@
                 <div class="product-header-content">
                     <!-- Indholdet vil blive udfyldt med JavaScript -->
                 </div>
-                <div class="product-nav-controls">
-                    <button class="product-nav-btn product-nav-prev" aria-label="Previous products">
-                        <i class="hgi hgi-stroke hgi-arrow-left-02"></i>
+                <div class="product-nav-controls" role="navigation" aria-label="Produktnavigation">
+                    <button class="product-nav-btn product-nav-prev" aria-label="Forrige produkter">
+                        <i class="hgi hgi-stroke hgi-arrow-left-02" aria-hidden="true"></i>
                     </button>
-                    <button class="product-nav-btn product-nav-next" aria-label="Next products">
-                        <i class="hgi hgi-stroke hgi-arrow-right-02"></i>
+                    <button class="product-nav-btn product-nav-next" aria-label="Næste produkter">
+                        <i class="hgi hgi-stroke hgi-arrow-right-02" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -334,12 +334,12 @@
                 <div class="product-header-content">
                     <!-- Indholdet vil blive udfyldt med JavaScript -->
                 </div>
-                <div class="product-nav-controls">
-                    <button class="product-nav-btn product-nav-prev" aria-label="Previous products">
-                        <i class="hgi hgi-stroke hgi-arrow-left-02"></i>
+                <div class="product-nav-controls" role="navigation" aria-label="Produktnavigation">
+                    <button class="product-nav-btn product-nav-prev" aria-label="Forrige produkter">
+                        <i class="hgi hgi-stroke hgi-arrow-left-02" aria-hidden="true"></i>
                     </button>
-                    <button class="product-nav-btn product-nav-next" aria-label="Next products">
-                        <i class="hgi hgi-stroke hgi-arrow-right-02"></i>
+                    <button class="product-nav-btn product-nav-next" aria-label="Næste produkter">
+                        <i class="hgi hgi-stroke hgi-arrow-right-02" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -481,15 +481,15 @@
             <div class="newsletter-content">
                 <h2>Tilmeld dig vores nyhedsbrev og få inspiration og eksklusive tilbud direkte i din indbakke</h2>
                 
-                <form class="newsletter-form">
+                <form class="newsletter-form" role="form" aria-label="Nyhedsbrev tilmelding">
                     <div class="newsletter-input-group">
                         <div class="newsletter-input-wrapper">
-                            <i class="hgi hgi-stroke hgi-mail-01"></i>
-                            <input type="email" placeholder="Indtast email" required>
+                            <i class="hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i>
+                            <input type="email" placeholder="Indtast email" required aria-label="E-mailadresse">
                         </div>
-                        <button type="submit" class="newsletter-btn">
+                        <button type="submit" class="newsletter-btn" aria-label="Tilmeld nyhedsbrev">
                             <span class="newsletter-btn-text">Tilmeld</span>
-                            <i class="hgi hgi-stroke hgi-arrow-right-02 newsletter-btn-icon"></i>
+                            <i class="hgi hgi-stroke hgi-arrow-right-02 newsletter-btn-icon" aria-hidden="true"></i>
                         </button>
                     </div>
                 </form>
@@ -497,7 +497,7 @@
         </div>
     </section>
     
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
@@ -505,27 +505,27 @@
                         <img src="img/logo/logo-1.svg" alt="Basic & More" class="footer-logo">
                         <p>Shop kendte brands til skarpe priser hos Basic & More. Vi får nye varer hver uge. Shop restparti og overskudsvarer til vanvittig lave priser. Billigere end markedet.</p>
                         
-                        <div class="footer-social">
-                            <a href="https://www.facebook.com/basicandmoredk" target="_blank" rel="noopener">
-                                <i class="hgi hgi-solid hgi-facebook-01"></i>
+                        <div class="footer-social" role="navigation" aria-label="Sociale medier links">
+                            <a href="https://www.facebook.com/basicandmoredk" target="_blank" rel="noopener" aria-label="Besøg vores Facebook side">
+                                <i class="hgi hgi-solid hgi-facebook-01" aria-hidden="true"></i>
                             </a>
-                            <a href="https://dk.pinterest.com/basic_andmore/" target="_blank" rel="noopener">
-                                <i class="hgi hgi-solid hgi-pinterest"></i>
+                            <a href="https://dk.pinterest.com/basic_andmore/" target="_blank" rel="noopener" aria-label="Besøg vores Pinterest side">
+                                <i class="hgi hgi-solid hgi-pinterest" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.instagram.com/basic_andmore/" target="_blank" rel="noopener">
-                                <i class="hgi hgi-solid hgi-instagram"></i>
+                            <a href="https://www.instagram.com/basic_andmore/" target="_blank" rel="noopener" aria-label="Besøg vores Instagram side">
+                                <i class="hgi hgi-solid hgi-instagram" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.tiktok.com/@basicandmore" target="_blank" rel="noopener">
-                                <i class="hgi hgi-solid hgi-tiktok"></i>
+                            <a href="https://www.tiktok.com/@basicandmore" target="_blank" rel="noopener" aria-label="Besøg vores TikTok side">
+                                <i class="hgi hgi-solid hgi-tiktok" aria-hidden="true"></i>
                             </a>
                         </div>
                         
-                        <div class="footer-apps">
+                        <div class="footer-apps" role="navigation" aria-label="App download links">
                             <div class="app-buttons">
-                                <a href="https://www.apple.com/dk/app-store/" target="_blank" rel="noopener" class="app-btn">
+                                <a href="https://www.apple.com/dk/app-store/" target="_blank" rel="noopener" class="app-btn" aria-label="Download vores app fra App Store">
                                     <img src="img/app/apple.svg" alt="Download på App Store">
                                 </a>
-                                <a href="https://play.google.com/store/apps" target="_blank" rel="noopener" class="app-btn">
+                                <a href="https://play.google.com/store/apps" target="_blank" rel="noopener" class="app-btn" aria-label="Få vores app fra Google Play">
                                     <img src="img/app/google.svg" alt="Få det på Google Play">
                                 </a>
                             </div>
@@ -559,13 +559,13 @@
                     
                     <div class="footer-column">
                         <h4>KONTAKT</h4>
-                        <div class="contact-info">
-                            <a href="tel:70602570" class="contact-link">
-                                <i class="hgi hgi-stroke hgi-call"></i>
+                        <div class="contact-info" role="complementary">
+                            <a href="tel:70602570" class="contact-link" aria-label="Ring til os på 70 60 25 70">
+                                <i class="hgi hgi-stroke hgi-call" aria-hidden="true"></i>
                                 70 60 25 70
                             </a>
-                            <a href="mailto:info@basicandmore.dk" class="contact-link">
-                                <i class="hgi hgi-stroke hgi-mail-01"></i>
+                            <a href="mailto:info@basicandmore.dk" class="contact-link" aria-label="Send os en e-mail">
+                                <i class="hgi hgi-stroke hgi-mail-01" aria-hidden="true"></i>
                                 Send en mail
                             </a>
                         </div>
