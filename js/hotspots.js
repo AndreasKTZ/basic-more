@@ -13,18 +13,19 @@ const hotspots = [
         // Position relativt til billedets center (i procent af billeddimensioner)
         x: -32,  // 32% til venstre for center
         y: 0,    // På center højde
-        productId: 'textured-vase',
-        title: 'Blå riflet prinsessekande',
-        shortDescription: 'Royal Copenhagen',
-        brand: 'Royal Copenhagen',
-        fullDescription: 'Smuk kande fra Royal Copenhagens klassiske serie. Den riflede overflade og de karakteristiske blå mønstre gør denne kande til et tidløst stykke dansk design. Perfekt til både hverdag og fest.',
+        productId: 'speedtsberg-vase',
+        title: 'Vase m. bobler',
+        shortDescription: 'i Mørkebrun (H30cm)',
+        brand: 'Speedtsberg',
+        fullDescription: 'Oplev en subtil skønhed med Speedtsberg\'s Vase med Bobler i Mørkebrun (H30cm). Denne fortryllende glasvase er en æstetisk perle og præsenteres i en smuk mørkebrun farvetone, der udstråler en varm og naturlig elegance.',
         specifications: {
             'Varenummer': 'UF-00116',
-            'Kapacitet': '55 cl.',
-            'Materiale': 'Porcelæn',
-            'Vaskemaskine': 'Ja'
+            'Størrelse': 'H:30cm x D:16cm',
+            'Materiale': 'Glas',
+            'Vaskeanvisning': 'Klud',
+            'Farve': 'Brun'
         },
-        price: 279,
+        price: 97,
         currency: 'DKK',
         discount: '-50%',
         stock: {
@@ -34,7 +35,7 @@ const hotspots = [
             'Lyngby Storcenter': 6
         },
         stockUnit: 'stk',
-        image: 'img/products/blue-riflet-vase.webp',
+        image: 'img/weekly/speedtsberg-vase.webp',
         // Mobile-specifikke koordinater for panning inden i billedet
         mobile: {
             backgroundPosition: '18% 50%',  // Viser venstre side af billedet
@@ -45,28 +46,29 @@ const hotspots = [
         id: 'product2',
         x: -5,   // 5% til venstre for center
         y: -18,  // 18% over center
-        productId: 'brown-glass-bowl',
-        title: 'Brune Glasskåle',
-        shortDescription: 'Elegant glassæt (3 stk)',
-        brand: 'Mondæl glas',
-        fullDescription: 'Elegant sæt af brune glasskåle i forskellige størrelser. Perfekt til servering af salater, snacks eller som dekorative elementer. Det varme, jordnære design passer til både moderne og klassiske interiører.',
+        productId: 'alberto-vase',
+        title: 'Glas Vase ALBERTO',
+        shortDescription: 'i Brun (Ø17,5x15cm)',
+        brand: 'Basic & More',
+        fullDescription: 'Tilføj et sofistikeret og moderne udtryk til dit hjem med Glas Vase ALBERTO i brun. Med sin unikke form og elegante ribbede struktur kombinerer ALBERTO funktionalitet og æstetik på smukkeste vis.',
         specifications: {
-            'Varenummer': 'MG-2041',
-            'Størrelse': '3 skåle - 12, 16, 20 cm',
-            'Materiale': 'Brunt glas',
-            'Vaskemaskine': 'Nej'
+            'Varenummer': 'UF-02041',
+            'Størrelse': 'Ø17,5 x 15 cm',
+            'Materiale': 'Glas',
+            'Vaskeanvisning': 'Klud',
+            'Farve': 'Brun'
         },
-        price: 189,
+        price: 67,
         currency: 'DKK',
-        discount: '-35%',
+        discount: '-23%',
         stock: {
             'Fisketorvet Mall': 8,
             'Fields': 7,
             'Frederiksberg Centret': 5,
             'Lyngby Storcenter': 3
         },
-        stockUnit: 'sæt',
-        image: 'img/products/brown-glass-bowls.webp',
+        stockUnit: 'stk',
+        image: 'img/weekly/alberto-vase.webp',
         mobile: {
             backgroundPosition: '40% 30%',  // Øverste center del
             backgroundSize: '450%'
@@ -76,28 +78,29 @@ const hotspots = [
         id: 'product3',
         x: 26,   // 26% til højre for center
         y: -10,  // 10% over center
-        productId: 'white-candles',
-        title: 'Hvide Stearinlys',
-        shortDescription: 'Klassiske koniske lys (6 stk)',
-        brand: 'Lyngby Porcelæn',
-        fullDescription: 'Klassiske hvide koniske stearinlys i premium kvalitet. Perfekt til at skabe hyggeligt lys i hjemmet. Brænder jævnt og langvarigt uden at dryppe.',
+        productId: 'beige-lysestage',
+        title: 'Keramisk lysestage',
+        shortDescription: 'i Beige (Ø7,5x31cm)',
+        brand: 'Basic & More',
+        fullDescription: 'Denne keramiske lysestage i beige, med dimensionerne Ø7,5x31 cm, er en elegant og tidløs tilføjelse til dit hjem. Dens slanke design og neutrale farve gør den ideel til at skabe en hyggelig atmosfære i ethvert rum.',
         specifications: {
-            'Varenummer': 'LP-0067',
-            'Antal': '6 stk',
-            'Materiale': 'Stearin',
-            'Brændtid': 'Ca. 8 timer pr. lys'
+            'Varenummer': 'UF-00167',
+            'Antal': '2 stk',
+            'Størrelse': 'Ø7,5 x 31 cm',
+            'Materiale': 'Keramik',
+            'Farve': 'Beige'
         },
-        price: 45,
+        price: 47,
         currency: 'DKK',
-        discount: null,
+        discount: '-35%',
         stock: {
             'Fisketorvet Mall': 20,
             'Fields': 18,
             'Frederiksberg Centret': 15,
             'Lyngby Storcenter': 14
         },
-        stockUnit: 'stk',
-        image: 'img/products/white-candles.webp',
+        stockUnit: 'sæt',
+        image: 'img/weekly/beige-lysestage.webp',
         mobile: {
             backgroundPosition: '82% 80%',  // Højre side, let ned
             backgroundSize: '450%'
@@ -107,20 +110,20 @@ const hotspots = [
         id: 'product4',
         x: -15,  // 15% til venstre for center
         y: 19,   // 19% under center
-        productId: 'center-glass-bowl',
-        title: 'Glas Centerskål',
-        shortDescription: 'House Doctor i klar glas',
-        brand: 'House Doctor',
-        fullDescription: 'Elegant glasskål i klart glas fra House Doctor. Perfekt som centerelement på spisebordet eller til servering af frugt og salater. Det minimalistische design passer til enhver indretningsstil.',
+        productId: 'beige-vase',
+        title: 'Keramikvase',
+        shortDescription: 'i Beige Mønstre (Ø31x20,7cm)',
+        brand: 'Basic & More',
+        fullDescription: 'Denne smukke vase, med sit unikke mønster, er den perfekte tilføjelse til dit boliginteriør. Den bløde beige farve komplementerer en lang række indretningsstile, fra minimalistisk til bohemsk, og skaber en harmonisk atmosfære.',
         specifications: {
-            'Varenummer': 'HD-3891',
-            'Diameter': '28 cm',
-            'Materiale': 'Klart glas',
-            'Vaskemaskine': 'Ja'
+            'Varenummer': 'UF-03891',
+            'Størrelse': 'Ø31 x 20,7 cm',
+            'Materiale': 'Keramik',
+            'Farve': 'Beige'
         },
-        price: 298,
+        price: 317,
         currency: 'DKK',
-        discount: '-42%',
+        discount: '-22%',
         stock: {
             'Fisketorvet Mall': 4,
             'Fields': 6,
@@ -128,7 +131,7 @@ const hotspots = [
             'Lyngby Storcenter': 2
         },
         stockUnit: 'stk',
-        image: 'img/products/glass-center-bowl.webp',
+        image: 'img/weekly/beige-vase.webp',
         mobile: {
             backgroundPosition: '34% 80%',  // Venstre side, nederst
             backgroundSize: '400%'
@@ -138,20 +141,20 @@ const hotspots = [
         id: 'product5',
         x: 15,   // 15% til højre for center
         y: 25,   // 25% under center
-        productId: 'right-glass-bowl',
-        title: 'Dekorativ Skål',
-        shortDescription: 'Speedtsberg i røget glas',
-        brand: 'Speedtsberg',
-        fullDescription: 'Smuk dekorativ skål i røget glas fra Speedtsberg. Den varme, røgede farve giver en sofistikeret følelse til enhver indretning. Perfekt til både praktisk brug og som dekoration.',
+        productId: 'marmor-vase',
+        title: 'Marmoreret vase',
+        shortDescription: 'i Beige (H24 x 24 cm)',
+        brand: 'Hübsch',
+        fullDescription: 'Stilfuld glasvase med marmorlook. Perfekt til et luksuriøst og moderne look i dit interiør. Ideel til (kunstige) blomster eller som et dekorativt objekt!',
         specifications: {
-            'Varenummer': 'SB-1247',
-            'Diameter': '24 cm',
-            'Materiale': 'Røget glas',
-            'Vaskemaskine': 'Ja'
+            'Varenummer': 'UF-01247',
+            'Størrelse': 'H24 x 24 cm',
+            'Materiale': 'Glas',
+            'Farve': 'Beige/creme'
         },
-        price: 156,
+        price: 249,
         currency: 'DKK',
-        discount: '-28%',
+        discount: '-38%',
         stock: {
             'Fisketorvet Mall': 3,
             'Fields': 2,
@@ -159,7 +162,7 @@ const hotspots = [
             'Lyngby Storcenter': 1
         },
         stockUnit: 'stk',
-        image: 'img/products/decorative-glass-bowl.webp',
+        image: 'img/weekly/marmor-vase.png',
         mobile: {
             backgroundPosition: '68% 90%',  // Højre side, nederst
             backgroundSize: '500%'
